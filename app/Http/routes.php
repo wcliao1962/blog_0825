@@ -47,6 +47,12 @@ Route::get('/', function () {
 //    $post->delete();
     //$post = \App\Post::destroy(2, 3);
 
+    $post = \App\Post::find(4);
+    foreach ($post->comments as $comment) {
+        echo $comment->title.'<br>';
+
+    }
+
 
    return view('welcome');
 });
