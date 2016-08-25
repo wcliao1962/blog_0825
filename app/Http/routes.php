@@ -12,5 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    \App\Post::create([
+//        'title'=>'test title1',
+//        'content'=>'test content1',
+//        'is_feature'=>true
+//    ]);
+
+    $post=new \App\Post();
+    $post->title='test title2';
+    $post->content='test content2';
+    $post->save();
+
+
+
+//    return view('welcome');
 });
