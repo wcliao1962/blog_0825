@@ -52,6 +52,8 @@ Route::get('/', function () {
         echo $comment->title.'<br>';
 
     }
+//    $post->title='new comment for post 4';
+//    $post->comments()->save();
 
 
    return view('welcome');
