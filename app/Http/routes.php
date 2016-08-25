@@ -29,7 +29,21 @@ Route::get('/', function () {
 //    $post=\App\Post::find(1);
 //    dd($post);
 
-    $posts=\App\Post::where('id', '<=', 3)->orderBy('id', 'DESC')->get();
-    dd($posts);
+//    $posts=\App\Post::where('id', '<=', 3)->orderBy('id', 'DESC')->get();
+//    dd($posts);
+
+//    $post=\App\Post::find(2);
+//    $post-> update([
+//        'title'=>'updated title',
+//        'content'=>'updated content',
+//    ]);
+
+    $post = \App\Post::find(3);
+    $post-> title='updated title';
+    $post->content='updated content';
+    $post->save();
+
+
+
 //    return view('welcome');
 });
