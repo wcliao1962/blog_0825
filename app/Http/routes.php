@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-//    \App\Post::create([
-//        'title'=>'test title1',
-//        'content'=>'test content1',
-//        'is_feature'=>true
-//    ]);
+    \App\Post::create([
+        'title'=>'test title1',
+        'content'=>'test content1',
+        'is_feature'=>true
+    ]);
 //
 //    $post=new \App\Post();
 //    $post->title='test title2';
@@ -38,12 +38,15 @@ Route::get('/', function () {
 //        'content'=>'updated content',
 //    ]);
 
-    $post = \App\Post::find(3);
-    $post-> title='updated title';
-    $post->content='updated content';
-    $post->save();
+//    $post = \App\Post::find(3);
+//    $post-> title='updated title';
+//    $post->content='updated content';
+//    $post->save();
+
+//    $post = \App\Post::find(1);
+//    $post->delete();
+    //$post = \App\Post::destroy(2, 3);
 
 
-
-//    return view('welcome');
+   return view('welcome');
 });
