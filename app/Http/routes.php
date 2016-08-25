@@ -17,13 +17,19 @@ Route::get('/', function () {
 //        'content'=>'test content1',
 //        'is_feature'=>true
 //    ]);
+//
+//    $post=new \App\Post();
+//    $post->title='test title2';
+//    $post->content='test content2';
+//    $post->save();
 
-    $post=new \App\Post();
-    $post->title='test title2';
-    $post->content='test content2';
-    $post->save();
+//    $posts=\App\Post::all();
+//    dd($posts);
 
+//    $post=\App\Post::find(1);
+//    dd($post);
 
-
+    $posts=\App\Post::where('id', '<=', 3)->orderBy('id', 'DESC')->get();
+    dd($posts);
 //    return view('welcome');
 });
